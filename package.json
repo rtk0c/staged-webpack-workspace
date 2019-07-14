@@ -19,11 +19,11 @@
   },
   "homepage": "https://github.com/rtk0c/staged-webpack-workspace#readme",
   "devDependencies": {
+    "css-loader": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
-    "html-webpack-plugin": "^3.2.0",
-    "css-loader": "^3.0.0",
-    "style-loader": "^0.23.1",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
   }

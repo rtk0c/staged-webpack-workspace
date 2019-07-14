@@ -1,6 +1,7 @@
 const path = require('path');
 const exec = require('child_process').exec;
 
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 function execute(commands) {
@@ -18,7 +19,7 @@ function log(msg) {
 
 module.exports = env => {
   return {
-    entry: './src/index.js',
+    entry: './src/index.ts',
     output: {
       filename: 'bundle.js',
       path: path.resolve(__dirname, './dist')
