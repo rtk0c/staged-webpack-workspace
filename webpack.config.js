@@ -41,9 +41,6 @@ module.exports = env => {
       extensions: [ '.tsx', '.ts', '.js' ]
     },
     plugins: [
-      new webpack.DefinePlugin({
-        REPOSITORY_URL: JSON.stringify(require("./package.json").repository.url),
-      }),
       new HtmlWebpackPlugin({
         template: 'src/index.html',
         inject: 'body',
@@ -57,7 +54,8 @@ module.exports = env => {
               return;
             }
             if (env.commit) {
-              execute([`bash ./build.sh "${REPOSITORY_URL}" "${new Date().toString()}"`]);
+              const repoUrl = JSON.stringify(require("./package.json").repository.url);
+              execute([`bash ./build.sh "${repoUrl}" "${new Date().toString()}"`]);
             }
           });
         }
