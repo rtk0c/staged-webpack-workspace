@@ -27,16 +27,17 @@ module.exports = env => {
       rules: [
         {
           test: /\.css$/,
-          use: [
-            {
-              loader: 'style-loader'
-            },
-            {
-              loader: 'css-loader'
-            }
-          ]
+          use: ['style-loader', 'css-loader']
         },
+        {
+          test: /\.tsx?$/,
+          use: ['ts-loader'],
+          exclude: /node_modules/
+        }
       ]
+    },
+    resolve: {
+      extensions: [ '.tsx', '.ts', '.js' ]
     },
     plugins: [
       new webpack.DefinePlugin({
