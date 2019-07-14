@@ -1,0 +1,30 @@
+{
+  "name": "staged-webpack-workspace",
+  "version": "1.0.0",
+  "description": "Webpack workspace preset that automatically publishes code onto the gh-pages branch",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rtk0c/staged-webpack-workspace.git"
+  },
+  "author": "rtk0c",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rtk0c/staged-webpack-workspace/issues"
+  },
+  "homepage": "https://github.com/rtk0c/staged-webpack-workspace#readme",
+  "devDependencies": {
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "html-webpack-plugin": "^3.2.0",
+    "css-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
+  }
+}
